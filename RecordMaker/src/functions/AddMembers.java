@@ -15,8 +15,8 @@ public class AddMembers {
 		
 		mMembers = new HashMap<Integer,Member>();
 		int cnt = Integer.parseInt(arg);
-		if(cnt>100000){
-			System.out.println("최대 회원수를 초과하였습니다. 프로그램을 종료합니다.");
+		if(cnt>100000||cnt<=0){
+			System.out.println("입력 범위를 벗어났습니다. 프로그램을 종료합니다.");
 			System.exit(0);
 		}
 		
@@ -66,7 +66,7 @@ public class AddMembers {
 		return "NT"+code;
 	}
 	private int createGrade(){
-		//random grade range 0~100
+		//random grade range 0~99
 		Random random = new Random();
 		
 		return random.nextInt(100);
