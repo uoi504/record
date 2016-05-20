@@ -7,7 +7,7 @@ public class Main {
 	public static void main(String[] args) {
 		// main
 		AddMembers add = new AddMembers();
-		add.addMember(args[0]);
+		add.addMembers(args[0]);
 	}
 
 }

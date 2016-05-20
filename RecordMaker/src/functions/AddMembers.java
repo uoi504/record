@@ -10,7 +10,7 @@ public class AddMembers {
 	
 	private Map<Integer,Member> mMembers;
 	
-	public void addMember(String arg){
+	public void addMembers(String arg){
 		//add to hash and print set;
 		
 		mMembers = new HashMap<Integer,Member>();
@@ -20,8 +20,7 @@ public class AddMembers {
 			System.exit(0);
 		}
 		
-		for(int i=0;i<cnt;i++){
-			
+		for(int i=0;i<cnt;i++){	
 			Member nMember = createMember();			
 			mMembers.put(nMember.getNumber(), nMember);
 			System.out.println(nMember.toString());
@@ -54,7 +53,7 @@ public class AddMembers {
 	
 	private boolean checkNumber(int rdNum){
 		//check overlapping
-		if(mMembers.get(rdNum)!=null){
+		if(!mMembers.isEmpty()&&mMembers.get(rdNum)!=null){
 			return false;	
 		}else{
 			return true;
